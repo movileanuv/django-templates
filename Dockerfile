@@ -38,4 +38,4 @@ USER $USER
 RUN python manage.py collectstatic --noinput
 
 # run dev server
-CMD gunicorn {{ project_name }}.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn {{ project_name }}.wsgi:application --bind 0.0.0.0:$PORT
