@@ -1,3 +1,12 @@
+setup:
+ addons:
+   - plan: heroku-postgresql
 build:
   docker:
     web: Dockerfile
+run:
+  web: gunicorn {{ project_name }}.wsgi:application --bind 0.0.0.0:$PORT
+release:
+  image: web
+  command:
+    - python manage.py migrate

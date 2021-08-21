@@ -2,7 +2,7 @@
 Start a new django project with 
 
 ```bash
-django-admin startproject <project name> --template=<url to this project> --name=Dockerfile
+django-admin startproject <project name> --template=https://github.com/ViggieSmalls/django-templates/archive/heroku.zip --name=Dockerfile --name=heroku.yml
 ```
 
 Build docker image and run it
