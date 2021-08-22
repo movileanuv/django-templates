@@ -17,6 +17,7 @@ export HEROKU_PROJECT_NAME=`heroku create | awk -F[/:] '{print $4}' | awk -F "."
 heroku config:set SECRET_KEY=`tr -dc A-Za-z0-9 </dev/urandom | head -c 30 ; echo ''` -a $HEROKU_PROJECT_NAME
 heroku config:set ALLOWED_HOSTS="$HEROKU_PROJECT_NAME.herokuapp.com" -a $HEROKU_PROJECT_NAME
 heroku stack:set container -a $HEROKU_PROJECT_NAME
+heroku addons:create heroku-postgresql:hobby-dev
 git init
 heroku git:remote -a $HEROKU_PROJECT_NAME
 git add --all
