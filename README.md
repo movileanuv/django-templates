@@ -1,4 +1,4 @@
 # django-templates
 Django startproject templates
 
-* [heroku](/tree/heroku)
+* [heroku](https://github.com/ViggieSmalls/django-templates/tree/heroku)
