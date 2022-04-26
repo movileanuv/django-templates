@@ -1,5 +1,11 @@
 # django-templates
-Start a new django project with 
+Decide on a new project name
+
+```bash
+export $PROJECT_NAME=carpe_diem
+```
+
+In your folder where you keep all your other projects execute following line: 
 
 ```bash
 django-admin startproject $PROJECT_NAME --template=https://github.com/ViggieSmalls/django-templates/archive/heroku.zip --name=Dockerfile --name=heroku.yml
